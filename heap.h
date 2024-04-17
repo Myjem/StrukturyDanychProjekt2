@@ -9,6 +9,7 @@ private:
     void heapify_up();
     void heapify_down();
 public:
+    Heap();
     void insert();
     node extract_max();
     node find_max();
@@ -16,6 +17,7 @@ public:
     node find_by_value(int v);//v-value
     void del(int v);
     void modify_key(int v,int p);
+    ~Heap();
 };
 
 #endif
