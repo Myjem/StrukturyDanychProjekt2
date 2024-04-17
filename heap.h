@@ -7,6 +7,9 @@ class Heap{
 private:
     ArrayList tab;
 public:
+    int parent(int i);//i-index
+    int left_child(int i);
+    int right_child(int i);
     void insert();
     int extract_max();
     int find_max();
