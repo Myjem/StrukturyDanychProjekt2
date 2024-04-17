@@ -4,7 +4,7 @@
 #include"queue_node.h"
 #include "heap.h"
 
-class Heap_queue::public base{
+class Heap_queue:public Base{
 private:
     Heap heap;
     int size=0;
