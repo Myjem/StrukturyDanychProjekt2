@@ -81,6 +81,8 @@ node Heap::find_by_value(int v) {
     }
     return{-1,-1};
 }
+
+
 void Heap::del(node e) {
     if(isEmpty()==1) return;
     for(int i=0;i<HeapArray.get_size();i++){
@@ -111,4 +113,3 @@ int Heap::get_size() {
     return HeapArray.get_size();
 }
 
-Heap::~Heap(){};

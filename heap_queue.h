@@ -9,12 +9,13 @@ private:
     Heap heap;
 public:
     Heap_queue();
-    void insert(int e,int p)=0;//e-element, p-priority
-    node extract_max()=0;
-    node find_max()=0;
-    void modify_key(int e,int p);
-    int get_size()=0;
-    void print()=0;
+    void insert(int v,int p);//v-value, p-priority
+    node extract_max();
+    node find_max();
+    void modify_key(node e,int p);
+    int get_size();
+    bool isEmpty();
+    void print();
     ~Heap_queue();
 };
 
