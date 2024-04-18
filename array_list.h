@@ -23,6 +23,7 @@ public:
     int get_size();
     int get_capacity();
     void set(int i,T data);
+    void swap_elements(int a,int b);
     ~ArrayList();
 };
 
@@ -105,6 +106,10 @@ template<typename T> int ArrayList<T>::get_capacity() {
 
 template<typename T> void ArrayList<T>::set(int i, T data) {
     tab[i]=data;
+}
+
+template<typename T> void ArrayList<T>::swap_elements(int a, int b) {
+    swap(tab[a],tab[b]);
 }
 
 template<typename T> ArrayList<T>::~ArrayList() {//destructor with deleting tab memory

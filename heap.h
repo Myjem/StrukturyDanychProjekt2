@@ -5,12 +5,15 @@
 
 class Heap{
 private:
-    ArrayList<node>tab;
-    void heapify_up();
-    void heapify_down();
+    ArrayList<node>HeapArray;
+    void heapify_up(node e);
+    void heapify_down(node e);
 public:
     Heap();
-    void insert();
+    node parent(int i);
+    node left_child(int i);
+    node right_child(int i);
+    void insert(node e);
     node extract_max();
     node find_max();
     node find_by_key(int p);//p-priority

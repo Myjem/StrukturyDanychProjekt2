@@ -7,7 +7,6 @@
 class Heap_queue:public Base{
 private:
     Heap heap;
-    int size=0;
 public:
     Heap_queue();
     void insert(int e,int p)=0;//e-element, p-priority
