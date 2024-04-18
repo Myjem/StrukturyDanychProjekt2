@@ -1,6 +1,9 @@
 #include "heap_queue.h"
+#include "queue_node.h"
 
 using namespace std;
+
+Heap_queue::Heap_queue() {}
 
 void Heap_queue::insert(int v, int p) {
     node temp={v,p};
@@ -34,3 +37,5 @@ void Heap_queue::print() {
         cout<<"Wartosc: "<<temp.value<<" Priorytet: "<<temp.priority<<endl;
     }
 }
+
+Heap_queue::~Heap_queue(){}

@@ -3,6 +3,8 @@
 
 using namespace std;
 
+Heap::Heap() {}
+
 bool Heap::isEmpty() {
     if(HeapArray.get_size()==0) return 1;
     else return 0;
@@ -10,7 +12,7 @@ bool Heap::isEmpty() {
 
 void Heap::heapify_up(int i){
     int par=parent(i);
-    if(par<0 or HeapArray.get(i).priority<HeapArray.get(par).priority) return;
+    if(par<0 or HeapArray.get(i).priority<=HeapArray.get(par).priority) return;//if node is equal parent I didn't swap nodes
     else
     {
         HeapArray.swap_elements(i,par);
@@ -101,7 +103,7 @@ void Heap::modify_key(node e, int p) {
     for(int i=0;i<HeapArray.get_size();i++){
         if( HeapArray.get(i).value==e.value and HeapArray.get(i).priority==e.priority){
             int temp=HeapArray.get(i).priority;
-            HeapArray.set(i,e);
+            HeapArray.set(i,{e.value,p});
             if(p>temp) heapify_up(i);
             else heapify_down(i);
             return;
@@ -113,3 +115,4 @@ int Heap::get_size() {
     return HeapArray.get_size();
 }
 
+Heap::~Heap(){}
