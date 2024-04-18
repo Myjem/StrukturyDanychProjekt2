@@ -6,20 +6,22 @@
 class Heap{
 private:
     ArrayList<node>HeapArray;
-    void heapify_up(node e);
-    void heapify_down(node e);
+    void heapify_up(int i);
+    void heapify_down(int i);
 public:
     Heap();
-    node parent(int i);
-    node left_child(int i);
-    node right_child(int i);
+    int parent(int i);
+    int left_child(int i);
+    int right_child(int i);
     void insert(node e);
     node extract_max();
     node find_max();
     node find_by_key(int p);//p-priority
     node find_by_value(int v);//v-value
-    void del(int v);
-    void modify_key(int v,int p);
+    void del(node e);
+    void modify_key(node e,int p);
+    int get_size();
+    bool isEmpty();
     ~Heap();
 };
 

@@ -6,7 +6,7 @@ public:
     virtual void insert(int e,int p)=0;//e-element, p-priority
     virtual node extract_max()=0;
     virtual node find_max()=0;
-    virtual void modify_key(int e,int p);
+    virtual void modify_key(node e,int p);
     virtual int get_size()=0;
     virtual void print()=0;
     virtual ~Base(){};
