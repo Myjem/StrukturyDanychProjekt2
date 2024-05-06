@@ -12,7 +12,7 @@ using namespace std;
 
 int main(){
     srand(time(NULL));
-    int size_file=100000;
+    int size_file=1000;
     int q=50;
     int random_push = 100001;
     int random_prio1[q];
@@ -22,7 +22,7 @@ int main(){
     for(int i=0;i<q;i++){
         random_prio1[i] = ((rand()%500000) + 1);
         random_prio2[i] = ((rand()%500000) + 1);
-        random_mod[i] = ((rand()%size_file) + 1);
+        random_mod[i] = rand()%size_file;
 
     }
     fstream file;
