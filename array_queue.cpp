@@ -8,12 +8,7 @@ array_queue::array_queue(){}
 void array_queue::insert(int v, int p)
 {
     node newnode = {v , p};
-    int index = 0;
-    while(index < ArrayQueue.get_size() && ArrayQueue.get(index).priority >= p)
-    {
-        index++;
-    }
-    ArrayQueue.append(index, newnode);
+    ArrayQueue.push_back(newnode);
 }
 node array_queue::extract_max()
 {
@@ -22,10 +17,18 @@ node array_queue::extract_max()
         cout << "kolejka jest pusta" << endl;
         return {-1 ,-1};
     }
-
-    node maxnode = ArrayQueue.get(0);
-    ArrayQueue.del_front();
-    return maxnode;
+    node max = ArrayQueue.get(0);
+    int max_index = 0;
+    for(int i  = 0; i < ArrayQueue.get_size(); i++)
+    {
+        if(ArrayQueue.get(i).priority > max.priority)
+        {
+            max = ArrayQueue.get(i);
+            max_index = i;
+        }
+    }
+    ArrayQueue.del(max_index);
+    return max;
 }
 node array_queue::find_max()
 {
@@ -34,7 +37,15 @@ node array_queue::find_max()
         cout << "kolejka jest pusta";
         return {-1 ,-1};
     }
-    return ArrayQueue.get(0);
+    node max = ArrayQueue.get(0);
+    for(int i  = 0; i < ArrayQueue.get_size(); i++)
+    {
+        if(ArrayQueue.get(i).priority > max.priority)
+        {
+            max = ArrayQueue.get(i);
+        }
+    }
+    return max;
 }
 
 void array_queue::modify_key(node e,int p)
