@@ -11,8 +11,8 @@
 using namespace std;
 
 int main(){
-    srand(time(NULL));
-    int size_file=1000;
+    /*srand(time(NULL));
+    int size_file=5000;
     int q=50;
     int random_push = 100001;
     int random_prio1[q];
@@ -83,8 +83,8 @@ int main(){
     cout<<"Czas dostania rozmiaru: "<<time.count()/q<<" ns"<<endl;
 
     for(int i=0;q>i;i++) delete tab[i];
-    delete[] tab;
+    delete[] tab;*/
 
-    //ui();
+    ui();
     return 0;
 }
