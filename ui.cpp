@@ -80,7 +80,7 @@ void ui() {
                     string name = "";
                     cout << "Podaj nazwe pliku: ";
                     cin >> name;
-                    cout << "Podaj ilość danych: ";
+                    cout << "Podaj ilosc danych: ";
                     cin >> number;
                     cout << endl;
                     if (tab->get_size() != 0) {//deleting old structures
@@ -117,7 +117,7 @@ void ui() {
                 }
                 case 2: {
                     srand(time(NULL));
-                    cout << "Podaj ilość danych: ";
+                    cout << "Podaj ilosc danych: ";
                     cin >> number;
                     if (tab->get_size() != 0) {
                         switch (mode) {//deleting old stucture

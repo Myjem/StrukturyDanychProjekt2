@@ -20,8 +20,7 @@ node array_queue::extract_max()
     if(isEmpty())
     {
         cout << "kolejka jest pusta" << endl;
-        cout << "kolejka jest tego typu";
-        return {0 ,0};
+        return {-1 ,-1};
     }
 
     node maxnode = ArrayQueue.get(0);
@@ -33,7 +32,7 @@ node array_queue::find_max()
     if(isEmpty())
     {
         cout << "kolejka jest pusta";
-        return {0 ,0};
+        return {-1 ,-1};
     }
     return ArrayQueue.get(0);
 }
