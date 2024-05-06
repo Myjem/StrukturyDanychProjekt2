@@ -78,7 +78,7 @@ void array_queue::print()
     }
     for(int i = 0; i < ArrayQueue.get_size(); i++)
     {
-        cout << "Wartość: " << ArrayQueue.get(i).value << " Priorytet: " << ArrayQueue.get(i).priority << endl;
+        cout << "Wartosc: " << ArrayQueue.get(i).value << " Priorytet: " << ArrayQueue.get(i).priority << endl;
     }
 }
 
