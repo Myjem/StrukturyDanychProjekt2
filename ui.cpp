@@ -7,6 +7,7 @@
 #include <string>
 #include "base.h"
 #include "heap_queue.h"
+#include "array_queue.h"
 #include "queue_node.h"
 using namespace std;
 
@@ -31,6 +32,8 @@ void ui() {
             case 2: {
                 //SingleListHead *t = new SingleListHead;
                 //tab=t;
+                array_queue *t = new array_queue;
+                tab=t;
                 break;
             }
             default: {
@@ -90,9 +93,12 @@ void ui() {
 
                             }
                             case 2: {
-                                delete tab;
+                                
                                 //SingleListHead *temp = new SingleListHead;
                                 //tab = temp;
+                                delete tab;
+                                array_queue *temp = new array_queue;
+                                tab = temp;
                                 break;
                             }
                         }
@@ -124,8 +130,8 @@ void ui() {
                             }
                             case 2: {
                                 delete tab;
-                                //SingleListHead *temp = new SingleListHead;
-                                //tab = temp;
+                                array_queue *temp = new array_queue;
+                                tab = temp;
                                 break;
                             }
                         }

@@ -3,5 +3,9 @@
 struct node{
     int value;
     int priority;
+
+    bool operator==(const node& other) const {
+        return (value == other.value) && (priority == other.priority);
+    }
 };
 #endif
