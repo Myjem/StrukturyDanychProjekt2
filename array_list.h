@@ -1,5 +1,6 @@
 #ifndef SD_PROJ2_ARRAY_LIST_H
 #define SD_PROJ2_ARRAY_LIST_H
+//template class for array list based on dynamic array implementation form first project
 #include<iostream>
 #include <cmath>
 using namespace std;

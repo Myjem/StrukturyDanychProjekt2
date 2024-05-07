@@ -12,7 +12,7 @@ public:
     void insert(int v,int p);//v-value, p-priority
     node extract_max();
     node find_max();
-    void modify_key(node e,int p);
+    void modify_key(node e,int p);//We have to find the node to modify priority
     int get_size();
     bool isEmpty();
     void print();

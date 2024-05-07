@@ -17,7 +17,7 @@ void ui() {
         Base*tab;
         cout << "Wybierz strukture: " << endl;
         cout << "[1] Kolejka priorytetowa na kopcu" << endl;
-        cout << "[2] Kolejka priorytetowa na tablicy dynamicznej" << endl;//work in progress
+        cout << "[2] Kolejka priorytetowa na tablicy dynamicznej" << endl;
         cout << "[0] Zakoncz" << endl << endl;
         cout << "Wybor: ";
         cin >> mode;
@@ -30,8 +30,6 @@ void ui() {
                 break;
             }
             case 2: {
-                //SingleListHead *t = new SingleListHead;
-                //tab=t;
                 array_queue *t = new array_queue;
                 tab=t;
                 break;
@@ -93,9 +91,6 @@ void ui() {
 
                             }
                             case 2: {
-                                
-                                //SingleListHead *temp = new SingleListHead;
-                                //tab = temp;
                                 delete tab;
                                 array_queue *temp = new array_queue;
                                 tab = temp;
@@ -109,7 +104,7 @@ void ui() {
                         string value,prio;
                         getline(file,value,' ');
                         getline(file,prio);
-                        tab->insert(stoi(value), stoi(prio));
+                        tab->insert(stoi(value), stoi(prio));//converting string from .txt file to int
                     }
                     file.close();
                     cout << endl << "Wczytano" << endl << endl;
@@ -140,7 +135,7 @@ void ui() {
                     cout << "Podaj najwieksza mozliwa liczbe: ";
                     cin >> max;
                     for (int i = 0; number > i; i++) tab->insert((rand()%max)+1,(rand()%(5*number))+1);//generating random numbers
-                    cout << endl << "Wygenerowano elementy o wartosciach z przedzialu <0,"<< max << "> o priorytetach z przedzialu <0,"<<5*number <<">"<<endl << endl;
+                    cout << endl << "Wygenerowano elementy o wartosciach z przedzialu <1,"<< max << "> o priorytetach z przedzialu <1,"<<5*number <<">"<<endl << endl;
                     break;
                 }
                 case 3: {
@@ -175,7 +170,7 @@ void ui() {
                     cin>>prio;
                     cout<<"Podaj nowy priorytet elementu: ";
                     cin>>new_prio;
-                    node temp={val,prio};
+                    node temp={val,prio};//making node for finding
                     tab->modify_key(temp,new_prio);
                     cout<<"Zmieniono priorytet elementu"<<endl;
                     break;

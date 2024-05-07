@@ -11,6 +11,7 @@
 using namespace std;
 
 int main(){
+    //code for testing
     /*srand(time(NULL));
     int size_file=5000;
     int q=50;
@@ -85,6 +86,6 @@ int main(){
     for(int i=0;q>i;i++) delete tab[i];
     delete[] tab;*/
 
-    ui();
+    ui();//ui function
     return 0;
 }
