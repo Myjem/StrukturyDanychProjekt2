@@ -23,7 +23,7 @@ node array_queue::extract_max()
     {
         if(ArrayQueue.get(i).priority > max.priority)
         {
-            max = ArrayQueue.get(i);
+            max = ArrayQueue.get(i);                            //keep max priority and its index
             max_index = i;
         }
     }
@@ -42,7 +42,7 @@ node array_queue::find_max()
     {
         if(ArrayQueue.get(i).priority > max.priority)
         {
-            max = ArrayQueue.get(i);
+            max = ArrayQueue.get(i);                        //same as above
         }
     }
     return max;
@@ -78,7 +78,7 @@ void array_queue::print()
     }
     for(int i = 0; i < ArrayQueue.get_size(); i++)
     {
-        cout << "Wartosc: " << ArrayQueue.get(i).value << " Priorytet: " << ArrayQueue.get(i).priority << endl;
+        cout << "Wartosc: " << ArrayQueue.get(i).value << " Priorytet: " << ArrayQueue.get(i).priority << endl;     
     }
 }
 
